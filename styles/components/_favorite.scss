@@ -1,0 +1,108 @@
+.favorite {
+    .heading {
+
+        h2 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: 30px;
+            margin: 10px 0;
+        }
+    }
+
+    .items {
+
+        .fr_item,
+        .sec_item,
+        .thr_item {
+            display: flex;
+            height: 500px;
+            justify-content: center;
+        }
+
+        .sec_item {
+            align-items: center;
+        }
+
+        .thr_item {
+            align-items: flex-end;
+        }
+
+        .favorite-item {
+            .content {
+                .img {
+                    width: 200px;
+                    height: 200px;
+                    border: 3px dashed #fdbf96;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    padding: 15px;
+                    box-shadow: 0 -50px 1px #fbdcc96b;
+                }
+
+                .data {
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+                    margin-top: -150px;
+                    border-radius: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgb(240, 150, 88);
+                    background: linear-gradient(180deg, rgba(240, 150, 88, 1) 3%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
+                    transition: all .5s;
+                    transform-origin: top;
+
+                    .name {
+                        font-weight: 700;
+                        font-size: 23px;
+                        margin: 0;
+                    }
+
+                    .cheese-name {
+                        font-weight: 400;
+                        font-size: 21px;
+                        color: #7e7e7e;
+                        margin: 10px 0;
+                    }
+
+                    .price {
+                        font-weight: 700;
+                        font-size: 23px;
+                    }
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .data {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .heading {
+            margin-bottom: 50px;
+        }
+
+        .items {
+
+            .fr,
+            .sec,
+            .thr {
+                display: flex;
+                height: 400px;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+    }
+}

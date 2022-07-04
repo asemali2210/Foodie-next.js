@@ -1,0 +1,128 @@
+.nav__bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon__toggle {
+        position: absolute;
+        top: -5px;
+        color: #c35308bd;
+        z-index: 1000;
+        left: 30px;
+        font-size: 40px;
+        display: none;
+        cursor: pointer;
+    }
+
+    &.nav-active {
+        background-color: hsl(36deg, 90%, 84%);
+        transition: background-color 1s;
+
+    }
+
+
+
+    .nav__scrolling {
+        position: absolute;
+        background-color: #e49797;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .1s;
+    }
+
+    .row {
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+
+            a {
+                font-size: 25px;
+                font-weight: 700;
+                letter-spacing: 5px;
+                font-family: 'Lobster', cursive;
+            }
+        }
+
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+
+                li {
+                    padding: 10px 0;
+
+                    a {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        background-color: hsl(36deg, 90%, 84%);
+
+        .icon__toggle {
+            display: block;
+        }
+
+        .row {
+            .logo {
+                justify-content: center;
+
+                a {
+                    font-size: 40px;
+                }
+            }
+
+            nav {
+                display: none;
+                padding: 40px;
+
+                .row {
+                    flex-direction: column;
+                    padding: 0;
+
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 10px 0;
+
+                        a {
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.nav-open {
+            height: 100vh;
+
+            nav {
+                display: block;
+            }
+        }
+    }
+}
