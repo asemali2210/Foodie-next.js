@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import headerImg from '../public/img/header.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
-
+import { FaFire, FaCheese } from 'react-icons/fa';
 function Header({ navRef }) {
     const headerRef = useRef();
 
@@ -31,14 +31,14 @@ function Header({ navRef }) {
                             </div>
                             <div className="food_details">
                                 <div>
-                                    <i className="fa fa-fire icon"></i>
+                                    <FaFire className="icon" />
                                     <div className="cal">
                                         <strong>600</strong>
                                         <small>calorise</small>
                                     </div>
                                 </div>
                                 <div>
-                                    <i className="fa fa-cheese icon"></i>
+                                    <FaCheese className="icon" />
                                     <div className="cheese">
                                         <strong>120G</strong>
                                         <small>Mozarella</small>

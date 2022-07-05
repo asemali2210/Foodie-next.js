@@ -38,15 +38,17 @@ function Nav({ navRef }) {
     return (
         <div ref={navRef} className={`nav__bar ${navActive ? `nav-active` : ''} ${navOpen ? 'nav-open' : ``}`}>
             <div className="nav__scrolling" style={navScrolling}></div>
-            <div onClick={toggleNav} className='icon__toggle' ref={toggleRef}>
-                {!navOpen ? <HiMenuAlt2 /> : <FaTimes />}
-            </div>
-
             <Container>
                 <Row>
                     <Col lg={4}>
                         <div className="logo">
                             <Link href="/">Foodie</Link>
+                        </div>
+                    </Col>
+                    <Col xs={12} className="d-lg-none">
+
+                        <div onClick={toggleNav} className='icon__toggle' ref={toggleRef}>
+                            {!navOpen ? <HiMenuAlt2 /> : <FaTimes />}
                         </div>
                     </Col>
                     <Col lg={8}>
